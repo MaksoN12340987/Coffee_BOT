@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="G8cH0tMZEAZD5JJCAiBP" name="Page-1">
+        <mxGraphModel dx="717" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4gm3H7psy5FQIBg6l18A-3" edge="1" parent="1" source="4gm3H7psy5FQIBg6l18A-1" style="edgeStyle=none;html=1;" target="4gm3H7psy5FQIBg6l18A-2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4gm3H7psy5FQIBg6l18A-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillStyle=auto;gradientColor=#99FF99;" value="START" vertex="1">
+                    <mxGeometry height="40" width="120" x="365" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4gm3H7psy5FQIBg6l18A-5" edge="1" parent="1" source="4gm3H7psy5FQIBg6l18A-2" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="4gm3H7psy5FQIBg6l18A-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4gm3H7psy5FQIBg6l18A-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillStyle=auto;gradientColor=#99FF99;" value="Открытие чата с ботом" vertex="1">
+                    <mxGeometry height="40" width="170" x="340" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4gm3H7psy5FQIBg6l18A-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Выбор юзера" vertex="1">
+                    <mxGeometry height="80" width="80" x="385" y="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
