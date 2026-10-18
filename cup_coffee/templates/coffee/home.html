@@ -1,0 +1,58 @@
+{% extends 'coffee/base.html' %}
+
+{% block title %}
+  Напитки
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid-base text-white">
+
+    <div class="container-md vh-100 p-3">
+
+      <div class="container-fluid" style="height: 3rem;"></div>
+
+      <div class="container-fluid p-4">
+        <h1>Список напитков</h1>
+      </div>
+
+      <div class="row row-cols-2 ms-1 me-1">
+        {% for cup in coffee %}
+      
+          <div class="col">
+
+            <div class="container bg-item text-white-card mb-3 p-1 rounded-4">
+                
+              <div class="d-flex align-items-center">
+                <img src="../../../media/{{ cup.drink_name }}" alt="" width="34" height="34" class="d-inline-block mt-1 ms-1">
+                <div class="flex-grow-0"><h4 class="mt-2 ms-1">{{ cup.drink_name }}</h4></div>
+              </div>
+
+              <p class="ms-2">
+                <h6>Напиток: {{ cup.preview }}</h6>
+              </p>
+
+              <a href="{% url 'cup_coffee:detaile' cup.pk %}" class="btn btn-outline-warning rounded-1 mb-2 ms-2">
+                Просмотреть
+              </a>
+            </div>    
+          
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div> 
+{% endblock %}
+
+
+{% block bottom %}
+  <div class="container text-center p-1">
+    
+    <div class="row p-1">
+      <div class="col">
+        <a href="{% url 'cup_coffee:home' %}" class="btn btn-success rounded-2">Обновить</a>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

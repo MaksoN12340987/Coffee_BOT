@@ -18,18 +18,14 @@ from django.urls import include, path
 from django.contrib import admin
 from django.urls import path
 
-from materials.apps import MaterialsConfig
+from cup_coffee.apps import CupCoffeeConfig
 from users.apps import UsersConfig
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path(
-    #     f"",
-    #     include(f"{MaterialsConfig.name}.urls", namespace=f"{MaterialsConfig.name}"),
-    # ),
     path(
         f"",
-        include(f"{MaterialsConfig.name}.urls", namespace=f"{MaterialsConfig.name}"),
+        include(f"{CupCoffeeConfig.name}.urls", namespace=f"{CupCoffeeConfig.name}"),
     ),
     path(
         f"{UsersConfig.name}/",

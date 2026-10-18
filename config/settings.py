@@ -1,8 +1,7 @@
 import logging
 import os
 from pathlib import Path
-
-from materials.apps import MaterialsConfig
+from cup_coffee.apps import CupCoffeeConfig
 from users.apps import UsersConfig
 
 logger_views_setings = logging.getLogger(__name__)
@@ -19,26 +18,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-AUTH_USER_MODEL = "users.User"
-# LOGIN_REDIRECT_URL = "catalog:home"
+AUTH_USER_MODEL = "users.BaseUser"
 LOGOUT_REDIRECT_URL = "users:login"
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
 ALLOWED_HOSTS = ["localhost", "192.168.1.2", "192.168.0.149"]
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     f"{UsersConfig.name}",
-    f"{MaterialsConfig.name}",
+    f"{CupCoffeeConfig.name}",
 ]
 
 MIDDLEWARE = [
@@ -93,10 +82,6 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", default="gorscheneow2018@yandex.ru")
 
 
-
-# Database
-# https://docs.djangoproject.com/en/6.1/ref/settings/#databases
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -107,10 +92,6 @@ DATABASES = {
         "PASSWORD": os.getenv("DATABASE_PASSWORD"),
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -127,10 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/6.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -142,8 +119,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/6.1/howto/static-files/
+# Static files
 
 STATIC_URL = 'static/'
 

@@ -80,7 +80,7 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #1f1f1f;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
@@ -226,8 +226,8 @@
 
 
 .container-fluid-base {
-  /* --bs-form-select-bg-img-home: url("../images/Japan_cars.jpg"); */
-  /* background-image: var(--bs-form-select-bg-img-home); */
+  --bs-form-select-bg-img-home: url("../images/Japan_cars.jpg");
+  background-image: var(--bs-form-select-bg-img-home);
   
   background-color: #000;
   
@@ -238,6 +238,31 @@
   padding-left: calc(var(--bs-gutter-x) * 0.1);
   margin-right: auto;
   margin-left: auto;
+}
+@media (min-width: 900px) {
+  .container-fluid-base {
+    max-width: 731px;
+  }
+}
+@media (min-width: 1920px) {
+  .container-fluid-base {
+    max-width: 731px;
+  }
+}
+:root {
+  --bs-breakpoint-md: 731px;
+}
+
+.bgcontainer-fluid-base-form {
+  --create-form: 255, 255, 255;
+  background-color: rgba(var(--create-form), 0.45) !important;
+}
+
+.bgcontainer-fluid-base-text {
+  --bs-rgb-post-card: 186, 124, 0;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-text-emphasis), 0.5) !important;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -341,7 +366,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: var(--bs-emphasis-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
