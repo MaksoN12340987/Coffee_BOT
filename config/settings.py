@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+from api.apps import ApiConfig
 from cup_coffee.apps import CupCoffeeConfig
 from users.apps import UsersConfig
 
@@ -21,6 +22,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 AUTH_USER_MODEL = "users.BaseUser"
+LOGIN_REDIRECT_URL = 'cup_coffee:home'
 LOGOUT_REDIRECT_URL = "users:login"
 
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     f"{UsersConfig.name}",
     f"{CupCoffeeConfig.name}",
+    f"{ApiConfig.name}",
 ]
 
 MIDDLEWARE = [

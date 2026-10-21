@@ -48,10 +48,25 @@ class UpdateCup(LoginRequiredMixin, UpdateView):
     model = CoffeeCup
     template_name = "coffee/update.html"
     form_class = CoffeeUpdateForm
-    success_url = reverse_lazy("bcup_coffeelog:home")
+    success_url = reverse_lazy("cup_coffee:home")
+
+    def form_valid(self, form):
+        # 1. Берем объект формы, но пока не сохраняем в базу (commit=False)
+        self.object = form.save(commit=False)
+        
+        # 2. Записываем текущего пользователя
+        self.object.updated_by = self.request.user
+        
+        # 3. Теперь сохраняем в базу
+        self.object.save()
+        
+        # 4. Возвращаем стандартное поведение (редирект на success_url)
+        return super().form_valid(form)
+    
 
 
 class DeleteCup(LoginRequiredMixin, DeleteView):
     model = CoffeeCup
     template_name = "coffee/delete.html"
+    context_object_name = "coffee"
     success_url = reverse_lazy("cup_coffee:home")

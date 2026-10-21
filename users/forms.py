@@ -28,47 +28,47 @@ class UserCreateForm(UserCreationForm):
 
         self.fields["username"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите имя пользователя",
             }
         )
         self.fields["first_name"].widget.attrs.update(
-            {"class": "form-control rounded-2 mb-2", "placeholder": "Введите ваше имя"}
+            {"class": "form-control rounded-2 mb-2 text-white", "placeholder": "Введите ваше имя"}
         )
         self.fields["last_name"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите вашу фамилию",
             }
         )
         self.fields["email"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите вашу почту",
             }
         )
         self.fields["location"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите страну, где вы находитесь",
             }
         )
         self.fields["phone_number"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-4",
+                "class": "form-control rounded-2 mb-4 text-white",
                 "placeholder": "Введите номер телефона",
             }
         )
         self.fields["preview"].widget.attrs.update(
             {
-                "class": "input-group rounded-2 mb-2",
+                "class": "input-group rounded-2 mb-2 text-white",
             }
         )
         self.fields["password1"].widget.attrs.update(
-            {"class": "form-control rounded-2 mb-2", "placeholder": "Придумайте пароль"}
+            {"class": "form-control rounded-2 mb-2 text-white", "placeholder": "Придумайте пароль"}
         )
         self.fields["password2"].widget.attrs.update(
-            {"class": "form-control rounded-2 mb-5", "placeholder": "Повторите пароль"}
+            {"class": "form-control rounded-2 mb-5 text-white", "placeholder": "Повторите пароль"}
         )
 
 
@@ -83,12 +83,12 @@ class AuthForm(AuthenticationForm):
 
         self.fields["username"].widget.attrs.update(
             {
-                "class": "form-control rounded-2",
+                "class": "form-control rounded-2 text-white",
                 "placeholder": "Введите имя пользователя",
             }
         )
         self.fields["password"].widget.attrs.update(
-            {"class": "form-control rounded-2", "placeholder": "Введите пароль"}
+            {"class": "form-control rounded-2 text-white", "placeholder": "Введите пароль"}
         )
 
 
@@ -110,39 +110,39 @@ class RedactProfileForm(UserChangeForm):
 
         self.fields["username"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите имя пользователя",
             }
         )
         self.fields["first_name"].widget.attrs.update(
-            {"class": "form-control rounded-2 mb-2", "placeholder": "Введите ваше имя"}
+            {"class": "form-control rounded-2 mb-2 text-white", "placeholder": "Введите ваше имя"}
         )
         self.fields["last_name"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите вашу фамилию",
             }
         )
         self.fields["email"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите вашу почту",
             }
         )
         self.fields["location"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-2",
+                "class": "form-control rounded-2 mb-2 text-white",
                 "placeholder": "Введите страну, где вы находитесь",
             }
         )
         self.fields["phone_number"].widget.attrs.update(
             {
-                "class": "form-control rounded-2 mb-4",
+                "class": "form-control rounded-2 mb-4 text-white",
                 "placeholder": "Введите номер телефона",
             }
         )
         self.fields["preview"].widget.attrs.update(
             {
-                "class": "input-group rounded-2 mb-2",
+                "class": "input-group rounded-2 mb-2 text-white",
             }
         )

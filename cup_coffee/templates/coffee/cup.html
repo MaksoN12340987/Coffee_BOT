@@ -11,17 +11,17 @@
 
       <div class="container-fluid text-start" style="height: 3rem;"></div>
 
-      <div class="container-fluid text-gray-right p-4">
+      <div class="container-fluid text-white p-4">
         <h1>{{ coffee.drink_name }}</h1>
       </div>
 
-      <div class="row p-4 text-start">
+      <div class="row p-4 text-start text-white">
 
         <!-- Блок с картинкой -->
         <div class="col-5">
           <div class="border overflow-hidden rounded-3">
             {% if coffee.preview %}
-              <img src="{{ coffee.preview.url }}" class="card-img-top" alt="{{ coffee.drink_name }}">
+              <img src="{{ coffee.preview.url }}" class="card-img-top" alt="">
             {% else %}
               <!-- Заглушка, если картинка не загружена -->
               <img src="/static/images/cup-contour.png" class="card-img-top" alt="Нет изображения">
@@ -46,38 +46,41 @@
           </div>
 
           <div class="mb-2">
-            <h6>Цена:</h6>
+            <h6>Цена</h6>
             <p class="fs-4 text-danger fw-bold">{{ coffee.price }} ₽</p>
           </div>
 
           <div class="mb-2">
             <h6>Калорийность:</h6>
-            <p>{{ coffee.caloric_of_drink }} ккал</p>
+            <p>{{ coffee.caloric_of_drink|default:"Не указано" }} ккал</p>
           </div>
 
+          <div class="mb-2">
+            <h6>Создан:</h6>
+            <p>{{ coffee.creation_date | date:"d M Y" }}</p>
+          </div>
+
+          <div class="mb-2">
+            <h6>Количество просмотров:</h6>
+            <p>{{ coffee.number_views }}</p>
+          </div>
+
+        </div>
+        
+        <div class="mb-2">
+          <h6>Кто обновил:</h6>
+          <p>{{ coffee.updated_by }}</p>
+        </div>
+
+        <div class="mb-2">
+          <h6>Когда обновил:</h6>
+          <p>{{ coffee.last_update }}</p>
         </div>
       
       </div>
 
       <!-- Блок управления (только для тех, у кого есть права) -->
-      {% if perms.coffee.change_coffee %}
-        <div class="container-fluid text-gray-right p-3">
-          <h3>Обновление напитка:</h3>
-
-          <form method="post" class="mb-5" enctype="multipart/form-data">
-            
-            {% csrf_token %}
-            {{ form.as_p }}
-            
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button type="submit" class="btn btn-warning btn-lg mt-3 mb-3 me-5">Сохранить</button>
-            </div>
-              
-          </form>
-        </div>
-      {% else %}
-        <div class="container-fluid text-start" style="height: 10rem;"></div>
-      {% endif %}
+      <div class="container-fluid text-start" style="height: 20rem;"></div>
 
     </div>
   </div> 
@@ -85,13 +88,5 @@
 
 
 {% block bottom %}
-<div class="container text-center p-1">
-    
-  <div class="row p-1 me-2">
-    <div class="col">
-      <a href="{% url 'cup_coffee:home' %}" class="btn btn-success rounded-2 me-4">Напитки</a>
-    </div>
-  </div>
 
-</div>
 {% endblock %}

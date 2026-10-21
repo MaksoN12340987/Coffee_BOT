@@ -3,8 +3,6 @@ from django.urls import path
 from cup_coffee.apps import CupCoffeeConfig
 from cup_coffee.views import CreateCup, DeleteCup, DetailCup, ListCup, UpdateCup
 
-
-
 app_name = CupCoffeeConfig.name
 
 urlpatterns = [

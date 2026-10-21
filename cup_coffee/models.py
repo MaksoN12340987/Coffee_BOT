@@ -1,5 +1,7 @@
 from django.db import models
 
+from config import settings
+
 class CoffeeCup(models.Model):
     """Модель кофе
 
@@ -41,6 +43,25 @@ class CoffeeCup(models.Model):
     publication_flag = models.BooleanField(
         verbose_name="Видно всем"
         )
+    creation_date = models.DateTimeField(
+        auto_now_add=True, verbose_name="Дата создания"
+    )
+    last_update = models.DateTimeField(
+        auto_now=True, verbose_name="Дата создания"
+    )
+    updated_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL, # Если юзера удалят, поле станет пустым (null)
+        null=True,
+        blank=True,
+        verbose_name="Кем обновлено"
+    )
+    number_views = models.IntegerField(
+        help_text="Количество просмотров",
+        verbose_name="Количество просмотров",
+        blank=True,
+        default=0,
+    )
     
     def __str__(self):
         return self.drink_name

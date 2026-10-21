@@ -1,0 +1,7 @@
+{
+    "🌐 Браузер": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --profile-directory=Default",
+    "🎵 YT Music": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe  --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod",
+    "🎭 Discord": "C:\\Users\\user\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe",
+    "✈ Telegram": "C:\\folders\\programs to communication\\telegram\\Telegram.exe",
+    "🎮 Steam": "C:\\Program Files (x86)\\Steam\\steam.exe"
+  }
