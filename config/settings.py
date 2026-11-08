@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 from api.apps import ApiConfig
 from cup_coffee.apps import CupCoffeeConfig
+from TV.apps import TVConfig
 from users.apps import UsersConfig
 
 logger_views_setings = logging.getLogger(__name__)
@@ -28,7 +29,7 @@ LOGOUT_REDIRECT_URL = "users:login"
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
-ALLOWED_HOSTS = ["localhost", "192.168.1.2", "192.168.0.149"]
+ALLOWED_HOSTS = ["localhost", "192.168.1.2", "192.168.1.100"]
 
 
 INSTALLED_APPS = [
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     f"{UsersConfig.name}",
     f"{CupCoffeeConfig.name}",
     f"{ApiConfig.name}",
+    f"{TVConfig.name}",
 ]
 
 MIDDLEWARE = [

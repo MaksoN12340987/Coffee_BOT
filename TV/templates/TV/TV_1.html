@@ -1,0 +1,110 @@
+{% extends 'TV/base_TV.html' %}
+
+
+{% block content %}
+<div class="menu-container p-1">
+  <div class="section-header-pill mt-2 p-2">
+    <h1>КОФЕ</h1>
+  </div>
+
+  <section class="section">
+    <div class="cold-grid">
+      {% for cup in menu.halva %}
+      <!-- Выводим в сетку только те, у которых есть картинка (не дефолтная) -->
+      {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
+      <div class="cold-item">
+        <div class="cold-img">
+          <img src="{{ cup.preview.url }}" alt="{{ cup.drink_name }}">
+        </div>
+        <div class="cold-info">
+          <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
+          <div class="cold-prices">
+            {% if cup.price_250 %}
+              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
+            {% endif %}
+            {% if cup.price_350 %}
+              <div class="cold-price-row"><span>350мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
+            {% endif %}
+            {% if cup.price_450 %}
+              <div class="cold-price-row"><span>450мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Заголовки объемов -->
+  <div class="ms-3 me-3 mt-2">
+    <div class="row volume-headers border border-black border-1 p-1 rounded-5">
+      <div class="col-6">Чай</div>
+      <div class="col-2">250мл</div>
+      <div class="col-2">350мл</div>
+      <div class="col-2">450мл</div>
+    </div>
+  </div>
+
+  <div class="ms-3 me-3">
+    <!-- Список напитков -->
+    <div class="menu-list">
+      {% for cup in menu.tea %}
+      <div class="menu-row">
+        <div class="name-col">
+          <span class="item-name">{{ cup.drink_name }}</span>
+          <!-- Выводим описание как тег, если оно есть и не "Без описания" -->
+          {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
+            <span class="tag">{{ cup.description }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="price-col">
+          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% endif %}</span>
+        </div>
+      </div>
+      {% empty %}
+      <div class="menu-empty">Меню пока пусто...</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Заголовки объемов -->
+  <div class="ms-3 me-3 mt-2">
+    <div class="row volume-headers border border-black border-1 p-1 rounded-5">
+      <div class="col-6">Шоколадное</div>
+      <div class="col-2">250мл</div>
+      <div class="col-2">350мл</div>
+      <div class="col-2">450мл</div>
+    </div>
+  </div>
+
+  <div class="ms-3 me-3">
+    <!-- Список напитков -->
+    <div class="menu-list">
+      {% for cup in menu.cocoa %}
+      <div class="menu-row">
+        <div class="name-col">
+          <span class="item-name">{{ cup.drink_name }}</span>
+          <!-- Выводим описание как тег, если оно есть и не "Без описания" -->
+          {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
+            <span class="tag">{{ cup.description }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="price-col">
+          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% endif %}</span>
+        </div>
+      </div>
+      {% empty %}
+      <div class="menu-empty">Меню пока пусто...</div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}

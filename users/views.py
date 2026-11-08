@@ -26,6 +26,7 @@ class UsersCreate(CreateView):
     model = BaseUser
     form_class = UserCreateForm
     template_name = "users/create.html"
+    success_url = "cup_coffee.home"
 
     def form_valid(self, form):
         user = form.save()

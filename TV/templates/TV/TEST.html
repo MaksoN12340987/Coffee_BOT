@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+  
+    <!-- Подключение внешнего CSS -->
+    <link href="\static\css\TEST.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="frame">
+        <!-- Уголки -->
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+    
+        <!-- Стрелки -->
+        <div class="arrow top">▲ ВЕРХ</div>
+        <div class="arrow bottom">▼ НИЗ</div>
+        <div class="arrow left">◀ ЛЕВО</div>
+        <div class="arrow right">ПРАВО ▶</div>
+    
+        <!-- Заголовок -->
+        <div class="header">
+        <h1>ТЕСТ ОРИЕНТАЦИИ</h1>
+        <p>Кофейня · меню 1080p · проверка вертикального режима</p>
+        </div>
+    
+        <!-- Центр -->
+        <div class="center">
+        <div class="big-text">1920 × 1080</div>
+        <div class="orientation-label" id="orientLabel">РЕЖИМ: ВЕРТИКАЛЬНЫЙ</div>
+        <div style="font-size: 20px; color: #aaa;">
+            Если текст читается сверху вниз — поворот сработал правильно
+        </div>
+        </div>
+    
+        <!-- Инфо -->
+        <div class="info">
+        <div>
+            <div class="label">Окно браузера</div>
+            <div class="value" id="winSize">—</div>
+        </div>
+        <div>
+            <div class="label">Поворот body</div>
+            <div class="value">90°</div>
+        </div>
+        <div>
+            <div class="label">Экран</div>
+            <div class="value" id="screenSize">—</div>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        // Показываем реальные размеры окна и экрана
+        function updateSizes() {
+        document.getElementById('winSize').textContent =
+            window.innerWidth + ' × ' + window.innerHeight;
+        document.getElementById('screenSize').textContent =
+            screen.width + ' × ' + screen.height;
+        }
+        updateSizes();
+        window.addEventListener('resize', updateSizes);
+    
+        // Определяем, применился ли поворот (по соотношению сторон body)
+        const bodyEl = document.body;
+        const isPortrait = () => {
+        const rect = bodyEl.getBoundingClientRect();
+        // После rotate(90deg) ширина и высота меняются местами
+        return rect.height > rect.width;
+        };
+        document.getElementById('orientLabel').textContent =
+        isPortrait() ? 'РЕЖИМ: ВЕРТИКАЛЬНЫЙ (90°)' : 'РЕЖИМ: ГОРИЗОНТАЛЬНЫЙ';
+    </script>
+  
+  </body>
+</html>

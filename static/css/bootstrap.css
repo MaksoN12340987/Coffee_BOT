@@ -180,6 +180,15 @@
 
 
 
+.text-end-ml {
+  --bs-text-opacity: 1;
+  color: rgba(var(0, 0, 0), var(1)) !important;  
+  text-align: right;
+  height: 30px
+}
+
+
+
 
 
 

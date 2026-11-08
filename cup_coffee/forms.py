@@ -9,8 +9,10 @@ class CoffeeCreateForm(forms.ModelForm):
             "drink_name",
             "preview",
             "description",
-            "price",
-            "caloric_of_drink",
+            "price_250",
+            "price_350",
+            "price_450",
+            "category",
             "publication_flag",
         ]
 
@@ -30,10 +32,16 @@ class CoffeeCreateForm(forms.ModelForm):
                 "placeholder": "Введите описание продукта",
             }
         )
-        self.fields["price"].widget.attrs.update(
+        self.fields["price_250"].widget.attrs.update(
             {"class": "contact-form-catalog", "type": "date"}
         )
-        self.fields["caloric_of_drink"].widget.attrs.update({"class": "form-check"})
+        self.fields["price_350"].widget.attrs.update(
+            {"class": "contact-form-catalog", "type": "date"}
+        )
+        self.fields["price_450"].widget.attrs.update(
+            {"class": "contact-form-catalog", "type": "date"}
+        )
+        self.fields["category"].widget.attrs.update({"class": "form-check"})
 
     # def clean(self):
     #     data_array = super().clean()
@@ -79,16 +87,25 @@ class CoffeeUpdateForm(forms.ModelForm):
     class Meta:
         model = CoffeeCup
         fields = [
+            "drink_name",
             "preview",
             "description",
-            "price",
-            "caloric_of_drink",
+            "price_250",
+            "price_350",
+            "price_450",
+            "category",
             "publication_flag",
         ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.fields["drink_name"].widget.attrs.update(
+            {
+                "class": "contact-form-catalog",
+                "placeholder": "Введите наименование продукта",
+            }
+        )
         self.fields["preview"].widget.attrs.update({"class": "contact-form"})
         self.fields["description"].widget.attrs.update(
             {
@@ -96,10 +113,21 @@ class CoffeeUpdateForm(forms.ModelForm):
                 "placeholder": "Введите описание продукта",
             }
         )
-        self.fields["price"].widget.attrs.update(
+        self.fields["price_250"].widget.attrs.update(
             {"class": "contact-form-catalog", "type": "date"}
         )
-        self.fields["caloric_of_drink"].widget.attrs.update({"class": "form-check"})
+        self.fields["price_350"].widget.attrs.update(
+            {"class": "contact-form-catalog", "type": "date"}
+        )
+        self.fields["price_450"].widget.attrs.update(
+            {"class": "contact-form-catalog", "type": "date"}
+        )
+        self.fields["category"].widget.attrs.update(
+            {
+                "class": "form-control", 
+                "placeholder": "черный, молочный, холодный, чай, авторский, добавки, халва, сироп"
+                }
+        )
 
     # def clean(self):
     #     data_array = super().clean()

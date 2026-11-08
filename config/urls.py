@@ -6,6 +6,7 @@ from django.urls import include, path
 from django.contrib import admin
 from django.urls import path
 
+from TV.apps import TVConfig
 from api.apps import ApiConfig
 from cup_coffee.apps import CupCoffeeConfig
 from users.apps import UsersConfig
@@ -23,6 +24,10 @@ urlpatterns = [
     path(
         f"{ApiConfig.name}/",
         include(f"{ApiConfig.name}.urls", namespace=f"{ApiConfig.name}"),
+    ),
+    path(
+        f"{TVConfig.name}/",
+        include(f"{TVConfig.name}.urls", namespace=f"{TVConfig.name}"),
     ),
 ]
 

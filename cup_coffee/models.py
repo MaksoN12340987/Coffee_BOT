@@ -14,35 +14,63 @@ class CoffeeCup(models.Model):
 
     Returns:
         _str_: Название напитка
-    """    
+    """
+    
+    CATEGORY_CHOICES = [
+        ("espresso", "эспрессо"),
+        ("black", "черный"),
+        ("milk", "молочный"),
+        ("cold", "холодный"),
+        ("tea", "чай"),
+        ("signature", "авторский"),
+        ("dobav", "добавки"),
+        ("halva", "халва"),
+        ("syrup", "сироп"),
+        ("signature_2", "авторский_2"),
+        ("cocoa", "какава"),
+    ]
    
     drink_name = models.CharField(
         verbose_name="Название напитка", 
         max_length=150, 
         default="COFFEE", blank=True
-        )
+    )
     preview = models.ImageField(
         verbose_name="Фотография", 
         upload_to="preview_cup/", 
         blank=True, default="images/cup-contour.png"
-        )
+    )
     description = models.CharField(
         verbose_name="Описание напитка", 
         blank=True, default="Без опиcания"
-        )
-    price = models.DecimalField(
-        verbose_name="Цена напитка", 
+    )
+    price_250 = models.DecimalField(
+        verbose_name="Цена 250 мл", 
         max_digits=10, 
         decimal_places=2, 
         help_text="Укажите цену в рублях: 250.00"
-        )
-    caloric_of_drink = models.DecimalField(
-        verbose_name="Калорийность напитка", 
-        null=True, blank=True
-        )
+    )
+    price_350 = models.DecimalField(
+        verbose_name="Цена 350 мл", 
+        max_digits=10, 
+        decimal_places=2, 
+        help_text="Укажите цену в рублях: 250.00"
+    )
+    price_450 = models.DecimalField(
+        verbose_name="Цена 450 мл", 
+        max_digits=10, 
+        decimal_places=2, 
+        help_text="Укажите цену в рублях: 250.00"
+    )
+    category = models.CharField(
+        choices=CATEGORY_CHOICES,
+        default="черный",
+        verbose_name="Категория напитка",
+        help_text="С маленькой буквы",
+    )
     publication_flag = models.BooleanField(
         verbose_name="Видно всем"
-        )
+    )
     creation_date = models.DateTimeField(
         auto_now_add=True, verbose_name="Дата создания"
     )
@@ -87,10 +115,10 @@ class CustomerReview:
         CoffeeCup, on_delete=models.SET_NULL, 
         null=True, blank=True,
         related_name="feedbacks"
-        )
+    )
     telegram_id = models.BigIntegerField(
         verbose_name="Telegram ID"
-        )
+    )
     rating = models.PositiveSmallIntegerField(
         choices=[(i, f"{i} ★") for i in range(1, 6)],
         verbose_name="Оценка",
@@ -100,16 +128,16 @@ class CustomerReview:
         verbose_name="Ваш отзыв", 
         blank=True, null=True,
         max_length=1000
-        )
+    )
     user = models.CharField(
         verbose_name="Имя", 
         blank=True, default="User"
-        )
+    )
     photo = models.ImageField(
         verbose_name="Фотография", 
         upload_to="preview_cup/", 
         blank=True, null=True
-        )
+    )
     
     def __str__(self):
         return f"{self.telegram_id}"
