@@ -43,6 +43,7 @@ class Tv_1(ListView):
             'syrup': [],
             'signature_2': [],
             'cocoa': [],
+            'other': []
         }
 
         # Раскладываем напитки по категориям
@@ -81,7 +82,9 @@ class Tv_2(ListView):
             'dobav': [],
             'halva': [],
             'syrup': [],
-            'signature_2': []
+            'signature_2': [],
+            'cocoa': [],
+            'other': []
         }
 
         # Раскладываем напитки по категориям
@@ -120,7 +123,9 @@ class Tv_3(ListView):
             'dobav': [],
             'halva': [],
             'syrup': [],
-            'signature_2': []
+            'signature_2': [],
+            'cocoa': [],
+            'other': []
         }
 
         # Раскладываем напитки по категориям
@@ -159,7 +164,9 @@ class Tv_4(ListView):
             'dobav': [],
             'halva': [],
             'syrup': [],
-            'signature_2': []
+            'signature_2': [],
+            'cocoa': [],
+            'other': []
         }
 
         # Раскладываем напитки по категориям
