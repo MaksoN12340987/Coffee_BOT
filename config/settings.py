@@ -29,7 +29,7 @@ LOGOUT_REDIRECT_URL = "users:login"
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
-ALLOWED_HOSTS = ["localhost", "192.168.1.2", "192.168.1.100", "192.168.1.110"]
+ALLOWED_HOSTS = ["localhost", "192.168.1.2", "192.168.1.100", "192.168.1.106"]
 
 
 INSTALLED_APPS = [
