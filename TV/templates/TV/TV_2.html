@@ -122,6 +122,8 @@
           <div class="cold-prices">
             {% if cup.price_250 %}
               <div class="cold-price-row"><span>В 0,2</span><span class="price">{{ cup.price_250|floatformat:0 }} р.</span></div>
+            {% else %}
+                <div class="cold-price-row"><span>Объем</span></div>
             {% endif %}
             {% if cup.price_350 %}
               <div class="cold-price-row"><span>В 0,3</span><span class="price">{{ cup.price_350|floatformat:0 }} р.</span></div>
