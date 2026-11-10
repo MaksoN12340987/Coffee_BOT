@@ -42,6 +42,7 @@ class Tv_1(ListView):
             'halva': [],
             'syrup': [],
             'signature_2': [],
+            'kids': [],
             'cocoa': [],
             'other': []
         }
@@ -83,6 +84,7 @@ class Tv_2(ListView):
             'halva': [],
             'syrup': [],
             'signature_2': [],
+            'kids': [],
             'cocoa': [],
             'other': []
         }
@@ -124,6 +126,7 @@ class Tv_3(ListView):
             'halva': [],
             'syrup': [],
             'signature_2': [],
+            'kids': [],
             'cocoa': [],
             'other': []
         }
@@ -166,6 +169,7 @@ class Tv_4(ListView):
             'syrup': [],
             'signature_2': [],
             'cocoa': [],
+            'kids': [],
             'other': []
         }
 
