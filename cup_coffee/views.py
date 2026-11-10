@@ -44,7 +44,7 @@ class CreateCup(CreateView):
     success_url = reverse_lazy("cup_coffee:home")
 
 
-class UpdateCup(LoginRequiredMixin, UpdateView):
+class UpdateCup(UpdateView):
     model = CoffeeCup
     template_name = "coffee/update.html"
     form_class = CoffeeUpdateForm
