@@ -35,29 +35,6 @@
     </div>
   </section>
 
-  <!-- <div class="ms-3 me-3">
-    <div class="menu-list">
-      {% for cup in menu.espresso %}
-      <div class="menu-row">
-        <div class="name-col">
-          <span class="item-name">{{ cup.drink_name }}</span>
-          {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
-            <span class="tag">{{ cup.description }}</span>
-          {% endif %}
-        </div>
-        
-        <div class="price-col">
-          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% endif %}</span>
-        </div>
-      </div>
-      {% empty %}
-      <div class="menu-empty">Меню пока пусто...</div>
-      {% endfor %}
-    </div>
-  </div> -->
-
   <!-- Заголовки объемов -->
   <div class="ms-3 me-3">
     <div class="row volume-headers border border-black border-1 p-1 rounded-5">
@@ -128,13 +105,13 @@
     </div>
   </div>
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="section-header-line p-2">
-      <h2>АЙС КОФЕ</h2>
+      <h2>Добавки</h2>
     </div>
 
     <div class="cold-grid">
-      {% for cup in menu.cold %}
+      {% for cup in menu.syrup %}
       {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
       <div class="cold-item">
         <div class="cold-img">
@@ -144,13 +121,13 @@
           <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
           <div class="cold-prices">
             {% if cup.price_250 %}
-              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>В 0,2</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
             {% endif %}
             {% if cup.price_350 %}
-              <div class="cold-price-row"><span>350мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>В 0,3</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
             {% endif %}
             {% if cup.price_450 %}
-              <div class="cold-price-row"><span>450мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>В 0,4</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
             {% endif %}
           </div>
         </div>
@@ -158,7 +135,7 @@
       {% endif %}
       {% endfor %}
     </div>
-  </section> -->
+  </section>
 
 </div>
 {% endblock %}
