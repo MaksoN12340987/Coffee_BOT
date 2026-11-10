@@ -112,14 +112,13 @@
     </div>
   </div>
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="section-header-line p-2">
       <h2>АЙС КОФЕ</h2>
     </div>
 
     <div class="cold-grid">
       {% for cup in menu.cold %}
-      <!-- Выводим в сетку только те, у которых есть картинка (не дефолтная) -->
       {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
       <div class="cold-item">
         <div class="cold-img">
@@ -143,7 +142,7 @@
       {% endif %}
       {% endfor %}
     </div>
-  </section>
+  </section> -->
 
 </div>
 {% endblock %}
