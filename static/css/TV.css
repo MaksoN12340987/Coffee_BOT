@@ -124,7 +124,7 @@
     display: grid;
     /* Название (1fr) + 3 колонки по 100px */
     grid-template-columns: 1fr 80px 80px 80px; 
-    font-size: 10px;
+    font-size: 14px;
     color: #555;
     /* border-bottom: 2px solid #ccc; */
     font-weight: 500;
