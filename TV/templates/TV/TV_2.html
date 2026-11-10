@@ -7,24 +7,40 @@
     <h1>КОФЕ</h1>
   </div>
 
-  <!-- Заголовки объемов -->
-  <div class="ms-3 me-3">
-    <div class="row volume-headers border border-black border-1 p-1 rounded-5">
-      <div class="col-6"></div>
-      <div class="col-2"></div>
-      <div class="col-2">36мл</div>
-      <div class="col-2"></div>
+  <section class="section">
+    <div class="cold-grid">
+      {% for cup in menu.espresso %}
+      {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
+      <div class="cold-item">
+        <div class="cold-img">
+          <img src="{{ cup.preview.url }}" alt="{{ cup.drink_name }}">
+        </div>
+        <div class="cold-info">
+          <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
+          <div class="cold-prices">
+            {% if cup.price_250 %}
+              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
+            {% endif %}
+            {% if cup.price_350 %}
+              <div class="cold-price-row"><span>36мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
+            {% endif %}
+            {% if cup.price_450 %}
+              <div class="cold-price-row"><span>450мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
-  </div>
+  </section>
 
-  <div class="ms-3 me-3">
-    <!-- Список напитков -->
+  <!-- <div class="ms-3 me-3">
     <div class="menu-list">
       {% for cup in menu.espresso %}
       <div class="menu-row">
         <div class="name-col">
           <span class="item-name">{{ cup.drink_name }}</span>
-          <!-- Выводим описание как тег, если оно есть и не "Без описания" -->
           {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
             <span class="tag">{{ cup.description }}</span>
           {% endif %}
@@ -40,7 +56,7 @@
       <div class="menu-empty">Меню пока пусто...</div>
       {% endfor %}
     </div>
-  </div>
+  </div> -->
 
   <!-- Заголовки объемов -->
   <div class="ms-3 me-3">
