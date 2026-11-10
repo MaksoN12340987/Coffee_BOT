@@ -28,6 +28,7 @@ class CoffeeCup(models.Model):
         ("syrup", "сироп"),
         ("signature_2", "авторский_2"),
         ("cocoa", "какава"),
+        ("kids", "детское"),
     ]
    
     drink_name = models.CharField(

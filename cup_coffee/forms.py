@@ -94,7 +94,7 @@ class CoffeeUpdateForm(forms.ModelForm):
             "price_350",
             "price_450",
             "category",
-            "publication_flag",
+            "publication_flag"
         ]
 
     def __init__(self, *args, **kwargs):
@@ -122,12 +122,8 @@ class CoffeeUpdateForm(forms.ModelForm):
         self.fields["price_450"].widget.attrs.update(
             {"class": "contact-form-catalog", "type": "date"}
         )
-        self.fields["category"].widget.attrs.update(
-            {
-                "class": "form-control", 
-                "placeholder": "черный, молочный, холодный, чай, авторский, добавки, халва, сироп"
-                }
-        )
+        self.fields["category"].widget.attrs.update({"class": "form-check"})
+
 
     # def clean(self):
     #     data_array = super().clean()
