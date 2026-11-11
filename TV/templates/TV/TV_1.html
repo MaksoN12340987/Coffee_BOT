@@ -108,40 +108,32 @@
     </div>
   </div>
 
-  <section class="section">
-    <div class="section-header-line p-2">
-      <h2>Детское</h2>
-    </div>
-
-    <div class="cold-grid">
-      {% for cup in menu.kids %}
-      <!-- Выводим в сетку только те, у которых есть картинка (не дефолтная) -->
-      {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
-      <div class="cold-item">
-        <div class="cold-img">
-          <img src="{{ cup.preview.url }}" alt="{{ cup.drink_name }}">
+  <div class="ms-3 me-3">
+    <!-- Список напитков -->
+    <div class="menu-list">
+      {% for cup in menu.signature_2 %}
+      <div class="menu-row">
+        <div class="name-col">
+          <span class="item-name">{{ cup.drink_name }}</span>
+          <!-- Выводим описание как тег, если оно есть и не "Без описания" -->
+          {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
+            <span class="tag">{{ cup.description }}</span>
+          {% endif %}
         </div>
-        <div class="cold-info">
-          <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
-          <div class="cold-prices">
-            {% if cup.price_250 %}
-              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
-              {% else %}
-                <div class="cold-price-row"><span>Объем</span></div>
-            {% endif %}
-            {% if cup.price_350 %}
-              <div class="cold-price-row"><span>350мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
-            {% endif %}
-            {% if cup.price_450 %}
-              <div class="cold-price-row"><span>450мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
-            {% endif %}
-          </div>
+        
+        <div class="price-col">
+          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% else %}-{% endif %}</span>
         </div>
       </div>
-      {% endif %}
+      {% empty %}
+      <div class="menu-empty">Меню пока пусто...</div>
       {% endfor %}
     </div>
-  </section>
+  </div>
+
+  
 
 </div>
 {% endblock %}

@@ -72,6 +72,43 @@
     </div>
   </div>
 
+  <div class="section-header-pill mt-2 p-2">
+    <h1>ДЕТСКОЕ</h1>
+  </div>
+  <section class="section">
+    <div class="section-header-line p-2">
+      <h2>Детское</h2>
+    </div>
+
+    <div class="cold-grid">
+      {% for cup in menu.kids %}
+      <!-- Выводим в сетку только те, у которых есть картинка (не дефолтная) -->
+      {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
+      <div class="cold-item">
+        <div class="cold-img">
+          <img src="{{ cup.preview.url }}" alt="{{ cup.drink_name }}">
+        </div>
+        <div class="cold-info">
+          <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
+          <div class="cold-prices">
+            {% if cup.price_250 %}
+              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
+              {% else %}
+                <div class="cold-price-row"><span>Объем</span></div>
+            {% endif %}
+            {% if cup.price_350 %}
+              <div class="cold-price-row"><span>350мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
+            {% endif %}
+            {% if cup.price_450 %}
+              <div class="cold-price-row"><span>450мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 
 </div>
 {% endblock %}
