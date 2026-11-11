@@ -109,28 +109,27 @@
   </div>
 
   <div class="ms-3 me-3">
-    <!-- Список напитков -->
-    <div class="menu-list">
-      {% for cup in menu.signature_2 %}
-      <div class="menu-row">
-        <div class="name-col">
-          <span class="item-name">{{ cup.drink_name }}</span>
-          <!-- Выводим описание как тег, если оно есть и не "Без описания" -->
-          {% if cup.description and cup.description != "Без описания" and cup.description != "Без опиcания" %}
-            <span class="tag">{{ cup.description }}</span>
-          {% endif %}
+    {% for cup in menu.signature_2 %}
+      <div class="promo-card">
+        <div class="promo-image">
+          <!-- Замените на реальную картинку чайника из БД -->
+          <img src="{{ cup.preview.url }}" alt="Большое чаепитие">
         </div>
         
-        <div class="price-col">
-          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% else %}-{% endif %}</span>
-          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% else %}-{% endif %}</span>
-          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% else %}-{% endif %}</span>
+        <div class="promo-content">
+          <h3 class="promo-title">{{ cup.drink_name }}</h3>
+          <p class="promo-desc">{{ cup.description }}</p>
+          
+          <div class="promo-price-wrap">
+            <!-- Если цена есть в БД, используйте {{ cup.price_350|floatformat:0 }} -->
+            <span class="promo-price">{% cup.price_350 %}</span>
+            <span class="promo-currency">₽</span>
+          </div>
         </div>
       </div>
-      {% empty %}
+    {% empty %}
       <div class="menu-empty">Меню пока пусто...</div>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </div>
 
   
