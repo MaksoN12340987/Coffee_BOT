@@ -19,13 +19,13 @@
           <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
           <div class="cold-prices">
             {% if cup.price_250 %}
-              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>{% else %}-
             {% endif %}
             {% if cup.price_350 %}
-              <div class="cold-price-row"><span>36мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>36мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>{% else %}-
             {% endif %}
             {% if cup.price_450 %}
-              <div class="cold-price-row"><span>45мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
+              <div class="cold-price-row"><span>45мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>{% else %}-
             {% endif %}
           </div>
         </div>
@@ -59,9 +59,9 @@
         </div>
         
         <div class="price-col">
-          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% else %}-{% endif %}</span>
         </div>
       </div>
       {% empty %}
@@ -94,9 +94,9 @@
         </div>
         
         <div class="price-col">
-          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% endif %}</span>
-          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% endif %}</span>
+          <span class="price">{% if cup.price_250 %}{{ cup.price_250|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_350 %}{{ cup.price_350|floatformat:0 }}{% else %}-{% endif %}</span>
+          <span class="price">{% if cup.price_450 %}{{ cup.price_450|floatformat:0 }}{% else %}-{% endif %}</span>
         </div>
       </div>
       {% empty %}
