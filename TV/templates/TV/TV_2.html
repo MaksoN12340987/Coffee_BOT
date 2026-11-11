@@ -19,13 +19,13 @@
           <div class="cold-title">{{ cup.drink_name|linebreaksbr }}</div>
           <div class="cold-prices">
             {% if cup.price_250 %}
-              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>{% else %}-
+              <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
             {% endif %}
             {% if cup.price_350 %}
-              <div class="cold-price-row"><span>36мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>{% else %}-
+              <div class="cold-price-row"><span>36мл</span><span class="price">{{ cup.price_350|floatformat:0 }}</span></div>
             {% endif %}
             {% if cup.price_450 %}
-              <div class="cold-price-row"><span>45мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>{% else %}-
+              <div class="cold-price-row"><span>45мл</span><span class="price">{{ cup.price_450|floatformat:0 }}</span></div>
             {% endif %}
           </div>
         </div>
