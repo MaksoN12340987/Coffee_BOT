@@ -186,6 +186,11 @@ class Tv_4(ListView):
         return context
 
 
+class Sale(ListView):
+    model = CoffeeCup
+    template_name = "TV/sale.html"
+    context_object_name = "coffee"
+
 class Test(ListView):
     model = CoffeeCup
     template_name = "TV/TEST.html"
