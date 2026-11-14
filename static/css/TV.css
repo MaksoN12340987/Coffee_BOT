@@ -159,13 +159,13 @@
   
   .item-name {
     font-size: 30px;
-    font-weight: 550; /* Тонкий шрифт */
+    font-weight: 500; /* Тонкий шрифт */
     color: #000000;
   }
   
   /* Желтые теги */
   .tag {
-    background: #d8ab1c;
+    background: #ffd900;
     color: #111;
     font-size: 12px;
     padding: 4px 10px;
