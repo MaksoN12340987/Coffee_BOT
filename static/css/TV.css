@@ -347,10 +347,42 @@
   font-weight: 500;
   color: #d8ab1c;
 }
-  
-.sale-img img {
+
+/* ============================================================
+   РЕКЛАМНАЯ КАРТОЧКА (БАННЕР)
+   ============================================================ */
+
+/* Внешний контейнер */
+.sale-card {
   width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
+  max-width: 800px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+  margin: 20px auto; /* Центрируем по горизонтали */
+  background-color: #fff;
+  border-radius: 24px; /* Полукруглые рамки для всего блока */
+  overflow: hidden; /* Обрезаем картинку по краям блока */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Картинка */
+.sale-image {
+  width: 100%;
+  height: 200px; /* ФИКСИРОВАННАЯ НЕБОЛЬШАЯ ВЫСОТА */
+  object-fit: cover; /* Картинка заполняет блок без искажений (лишнее обрежется) */
+  display: block;
+}
+
+/* Текст под картинкой */
+.sale-text {
+  padding: 15px 20px; /* Отступы для текста */
+  text-align: center; /* Выравнивание текста по центру */
+  background-color: #fff;
+}
+
+.sale-text p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
 }
