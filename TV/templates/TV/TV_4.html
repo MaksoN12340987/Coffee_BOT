@@ -4,11 +4,11 @@
 {% block content %}
 <div class="menu-container p-1">
   <div class="section-header-pill mt-2 p-2">
-    <h1>ПОКУШАТЬ</h1>
+    <h1>ДЕТСКОЕ</h1>
   </div>
   <section class="section">
     <div class="cold-grid">
-      {% for cup in menu.signature %}
+      {% for cup in menu.kids %}
       <!-- Выводим в сетку только те, у которых есть картинка (не дефолтная) -->
       {% if cup.preview and cup.preview.name != 'images/cup-contour.png' %}
       <div class="cold-item">
@@ -20,7 +20,7 @@
           <div class="cold-prices">
             {% if cup.price_250 %}
               <div class="cold-price-row"><span>250мл</span><span class="price">{{ cup.price_250|floatformat:0 }}</span></div>
-            {% else %}
+              {% else %}
                 <div class="cold-price-row"><span>Объем</span></div>
             {% endif %}
             {% if cup.price_350 %}
@@ -36,5 +36,8 @@
       {% endfor %}
     </div>
   </section>
+
+  <img src="/static/images/sale.jpg" alt="Реклама" class="fullscreen-ad">
+
 </div>
 {% endblock %}
