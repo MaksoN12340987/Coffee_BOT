@@ -165,8 +165,8 @@
   
   /* Желтые теги */
   .tag {
-    background: #ffd900;
-    color: #111;
+    background: #21498B;
+    color: #ffffff;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 20px;
@@ -277,8 +277,8 @@
 .promo-card {
   display: flex;
   align-items: center;
-  background: #ffffff;
-  border: 3px solid #d8ab1c; /* Желтая рамка в цвет заголовков */
+  background: #21498B;
+  border: 3px solid #74a9ff; /* Желтая рамка в цвет заголовков */
   border-radius: 24px;
   padding: 24px 30px;
   margin-top: 30px;
