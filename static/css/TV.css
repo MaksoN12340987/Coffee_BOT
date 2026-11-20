@@ -79,7 +79,7 @@
   }
 
   .container-fluid-hed {
-    background: #d8ab1c;
+    background: #21498B;
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
@@ -95,7 +95,7 @@
     font-size: 40px;
     font-weight: 600;
     letter-spacing: 4px;
-    color: #111;
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
@@ -165,7 +165,7 @@
   
   /* Желтые теги */
   .tag {
-    background: #ffd900;
+    background: #21498B;
     color: #111;
     font-size: 12px;
     padding: 4px 10px;
@@ -277,8 +277,8 @@
 .promo-card {
   display: flex;
   align-items: center;
-  background: #ffffff;
-  border: 3px solid #d8ab1c; /* Желтая рамка в цвет заголовков */
+  background: #21498B;
+  border: 3px solid #4284ee; /* Желтая рамка в цвет заголовков */
   border-radius: 24px;
   padding: 24px 30px;
   margin-top: 30px;
