@@ -27,6 +27,7 @@ class CoffeeCup(models.Model):
         ("halva", "халва"),
         ("syrup", "сироп"),
         ("signature_2", "авторский_2"),
+        ("signature_3", "авторский_3"),
         ("cocoa", "какава"),
         ("kids", "детское"),
     ]
