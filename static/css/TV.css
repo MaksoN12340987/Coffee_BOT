@@ -166,7 +166,7 @@
   /* Желтые теги */
   .tag {
     background: #21498B;
-    color: #111;
+    color: #ffffff;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 20px;
@@ -345,7 +345,7 @@
 .promo-currency {
   font-size: 28px;
   font-weight: 500;
-  color: #d8ab1c;
+  color: #21498B;
 }
 
 /* ============================================================
