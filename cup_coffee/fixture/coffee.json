@@ -1,0 +1,308 @@
+[
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 1,
+    "fields": {
+        "drink_name": "Эспрессо",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "120.00",
+        "price_450": "0.00",
+        "category": "espresso",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T10:30:42.334Z",
+        "last_update": "2026-11-08T10:30:42.334Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 2,
+    "fields": {
+        "drink_name": "Эспрессо-тоник",
+        "preview": "preview_cup/500x500-orig.png",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "240.00",
+        "price_450": "280.00",
+        "category": "cold",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T10:31:04.725Z",
+        "last_update": "2026-11-08T14:24:58.897Z",
+        "updated_by": 1,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 3,
+    "fields": {
+        "drink_name": "Американо",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "170.00",
+        "price_350": "190.00",
+        "price_450": "210.00",
+        "category": "black",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T10:46:05.829Z",
+        "last_update": "2026-11-08T10:46:05.829Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 4,
+    "fields": {
+        "drink_name": "Капучино",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "200.00",
+        "price_350": "240.00",
+        "price_450": "280.00",
+        "category": "milk",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T10:51:34.056Z",
+        "last_update": "2026-11-08T10:51:34.056Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 5,
+    "fields": {
+        "drink_name": "Латте",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "190.00",
+        "price_350": "220.00",
+        "price_450": "250.00",
+        "category": "milk",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T11:23:19.289Z",
+        "last_update": "2026-11-08T11:23:19.289Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 6,
+    "fields": {
+        "drink_name": "Раф",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "260.00",
+        "price_450": "300.00",
+        "category": "milk",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T11:24:25.956Z",
+        "last_update": "2026-11-08T11:24:25.956Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 7,
+    "fields": {
+        "drink_name": "Капучино крема",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "215.00",
+        "price_350": "250.00",
+        "price_450": "290.00",
+        "category": "milk",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T11:48:44.093Z",
+        "last_update": "2026-11-08T11:48:44.093Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 8,
+    "fields": {
+        "drink_name": "Айс латте",
+        "preview": "preview_cup/Снимок_экрана_2026-11-08_164146.jpg",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "250.00",
+        "price_450": "290.00",
+        "category": "cold",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T12:14:58.897Z",
+        "last_update": "2026-11-08T13:59:01.178Z",
+        "updated_by": 1,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 9,
+    "fields": {
+        "drink_name": "Апельсиновый",
+        "preview": "preview_cup/Снимок_экрана_2026-11-08_164146-1.jpg",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "250.00",
+        "price_450": "290.00",
+        "category": "cold",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T14:20:54.226Z",
+        "last_update": "2026-11-08T14:20:54.226Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 10,
+    "fields": {
+        "drink_name": "Кофейно-банановый",
+        "preview": "preview_cup/Снимок_экрана_2026-11-08_164146-2.jpg",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "280.00",
+        "price_450": "320.00",
+        "category": "cold",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T14:22:54.446Z",
+        "last_update": "2026-11-08T14:23:08.538Z",
+        "updated_by": 1,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 11,
+    "fields": {
+        "drink_name": "Матча",
+        "preview": "preview_cup/images-1.jpg",
+        "description": "Зеленая / Синяя",
+        "price_250": "0.00",
+        "price_350": "240.00",
+        "price_450": "270.00",
+        "category": "tea",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T15:57:27.208Z",
+        "last_update": "2026-11-08T16:12:29.369Z",
+        "updated_by": 1,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 12,
+    "fields": {
+        "drink_name": "Халва",
+        "preview": "preview_cup/Снимок_экрана_2026-11-08_190426.jpg",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "260.00",
+        "price_450": "300.00",
+        "category": "halva",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:05:25.529Z",
+        "last_update": "2026-11-08T16:05:25.529Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 13,
+    "fields": {
+        "drink_name": "Чай",
+        "preview": "images/cup-contour.png",
+        "description": "Пакетик/Листовой",
+        "price_250": "100.00",
+        "price_350": "120.00",
+        "price_450": "150.00",
+        "category": "tea",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:10:54.992Z",
+        "last_update": "2026-11-08T16:10:54.992Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 14,
+    "fields": {
+        "drink_name": "Мята-шоколад",
+        "preview": "preview_cup/Снимок_экрана_2026-11-08_191357.jpg",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "280.00",
+        "price_450": "320.00",
+        "category": "halva",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:16:43.532Z",
+        "last_update": "2026-11-08T16:16:43.532Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 15,
+    "fields": {
+        "drink_name": "Моккачино",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "260.00",
+        "price_450": "290.00",
+        "category": "milk",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:19:31.260Z",
+        "last_update": "2026-11-08T16:22:34.335Z",
+        "updated_by": 1,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 16,
+    "fields": {
+        "drink_name": "Какао",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "170.00",
+        "price_350": "200.00",
+        "price_450": "230.00",
+        "category": "cocoa",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:26:46.305Z",
+        "last_update": "2026-11-08T16:26:46.305Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+},
+{
+    "model": "cup_coffee.coffeecup",
+    "pk": 17,
+    "fields": {
+        "drink_name": "Горячий шоколад",
+        "preview": "images/cup-contour.png",
+        "description": "Без опиcания",
+        "price_250": "0.00",
+        "price_350": "260.00",
+        "price_450": "290.00",
+        "category": "cocoa",
+        "publication_flag": true,
+        "creation_date": "2026-11-08T16:30:36.708Z",
+        "last_update": "2026-11-08T16:30:36.708Z",
+        "updated_by": null,
+        "number_views": 0
+    }
+}
+]

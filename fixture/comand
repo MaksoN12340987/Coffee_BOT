@@ -1,0 +1,7 @@
+python -Xutf8 manage.py dumpdata materials.Course --output fixture/standart_courses.json --indent 4
+python -Xutf8 manage.py dumpdata materials.Lesson --output fixture/standart_lessons.json --indent 4
+python -Xutf8 manage.py dumpdata users.User --output fixture/standart_users.json --indent 4
+
+python manage.py loaddata fixture/standart_courses.json --format json
+python manage.py loaddata fixture/standart_lessons.json --format json
+python manage.py loaddata fixture/standart_users.json --format json

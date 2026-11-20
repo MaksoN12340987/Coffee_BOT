@@ -1,0 +1,23 @@
+[
+{
+    "model": "users.baseuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$pYNhayGmz0PzEkErcaUBBl$plLHAsTBoF2KaHW5ejPhZVSoyUzhpWigfatipAIY8TY=",
+        "last_login": "2026-11-07T16:11:16.944Z",
+        "is_superuser": false,
+        "username": "Maxim",
+        "first_name": "Максим",
+        "last_name": "Андрианов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-04T13:42:19.875Z",
+        "preview": "users/DSC00166.JPG",
+        "email": "andrianov_maksim@outlook.com",
+        "phone_number": "79671717124",
+        "location": "Russia",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
