@@ -277,7 +277,7 @@
 .promo-card {
   display: flex;
   align-items: center;
-  background: #cecece;
+  background: #ffffff;
   border: 3px solid #21498B; /* Желтая рамка в цвет заголовков */
   border-radius: 24px;
   padding: 24px 30px;
