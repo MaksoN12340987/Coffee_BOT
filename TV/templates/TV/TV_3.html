@@ -72,6 +72,30 @@
     </div>
   </div>
 
+  <div class="ms-3 me-3">
+    {% for cup in menu.signature_3 %}
+      <div class="promo-card">
+        <div class="promo-image">
+          <!-- Замените на реальную картинку чайника из БД -->
+          <img src="{{ cup.preview.url }}" alt="Большое чаепитие">
+        </div>
+        
+        <div class="promo-content">
+          <h3 class="promo-title">{{ cup.drink_name }}</h3>
+          <p class="promo-desc">{{ cup.description }}</p>
+          
+          <div class="promo-price-wrap">
+            <!-- Если цена есть в БД, используйте {{ cup.price_350|floatformat:0 }} -->
+            <span class="promo-price">{{ cup.price_350 }}</span>
+            <span class="promo-currency">₽</span>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="menu-empty">Меню пока пусто...</div>
+    {% endfor %}
+  </div>
+
 </div>
 {% endblock %}
 
